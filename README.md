@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/umbrellio/telegraf_agent.svg?branch=master)](https://travis-ci.org/umbrellio/telegraf_agent)
 [![Coverage Status](https://coveralls.io/repos/github/umbrellio/telegraf_agent/badge.svg?branch=master)](https://coveralls.io/github/umbrellio/telegraf_agent?branch=master)
+[![Gem Version](https://badge.fury.io/rb/telegraf_agent.svg)](https://badge.fury.io/rb/telegraf_agent)
 
 ## Installation
 
