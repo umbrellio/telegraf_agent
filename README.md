@@ -4,6 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/umbrellio/telegraf_agent/badge.svg?branch=master)](https://coveralls.io/github/umbrellio/telegraf_agent?branch=master)
 [![Gem Version](https://badge.fury.io/rb/telegraf_agent.svg)](https://badge.fury.io/rb/telegraf_agent)
 
+Class for sending data to the telegraf server.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,8 +24,32 @@ Or install it yourself as:
 
 ## Usage
 
-```ruby
+Just initialize an agent like:
+
+
+```ruby 
 logger = Logger.new(STDOUT)
-agent = TelegrafAgent.new(url: "udp://localhost:3030", logger: logger)
-agent.write("SuperProject", keys: { env: Rails.env }, values: { action: "index", duration: 0.2 })
+url = "tcp://localhost:1234"
+angent = TelegrafAgent.new(url: url, logger: logger)
 ```
+
+Logger param is optional.
+
+And then use:
+
+```ruby
+keys = { env: Rails.env }
+values = { action: "index", duration: 0.2 }
+agent.write("SuperProject", keys: keys, values: values)
+```
+All params are required.
+
+## License
+Released under MIT License.
+
+## Authors
+Created by Aleksey Bespalov.
+
+<a href="https://github.com/umbrellio/">
+  <img style="float: left;" src="https://umbrellio.github.io/Umbrellio/supported_by_umbrellio.svg" alt="Supported by Umbrellio" width="439" height="72">
+</a>
