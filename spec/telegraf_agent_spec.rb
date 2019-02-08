@@ -51,4 +51,22 @@ RSpec.describe TelegrafAgent do
 
     it_behaves_like "data sender", "unix://etc/socket/path"
   end
+
+  context "unixgram" do
+    let(:socket_double) { instance_double(Socket, connect: nil, write: nil, close: nil) }
+
+    before { stub_const("Socket", double(new: socket_double)) }
+
+    before { allow(Socket).to receive(:pack_sockaddr_un).and_return("/socket/path") }
+
+    it_behaves_like "data sender", "unixgram://etc/socket/path"
+  end
+
+  context "invalid scheme" do
+    it "rasies an error" do
+      agent = described_class.new(url: "invalid://etc/socket")
+      expect { agent.write("data", tags: {}, values: {}) }
+        .to raise_error(TelegrafAgent::ConnectionError, "Unsupported connection type: invalid")
+    end
+  end
 end
