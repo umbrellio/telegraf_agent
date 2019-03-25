@@ -27,10 +27,10 @@ Or install it yourself as:
 Just initialize an agent like:
 
 
-```ruby 
+```ruby
 logger = Logger.new(STDOUT)
 url = "tcp://localhost:1234"
-angent = TelegrafAgent.new(url: url, logger: logger)
+agent = TelegrafAgent.new(url: url, logger: logger)
 ```
 
 Logger param is optional.
@@ -38,9 +38,9 @@ Logger param is optional.
 And then use:
 
 ```ruby
-keys = { env: Rails.env }
+tags = { env: Rails.env }
 values = { action: "index", duration: 0.2 }
-agent.write("SuperProject", keys: keys, values: values)
+agent.write("SuperProject", tags: tags, values: values)
 ```
 All params are required.
 

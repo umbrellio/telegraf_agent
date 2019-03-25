@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    telegraf_agent (0.1.0)
+    telegraf_agent (0.1.1)
       influxdb (~> 0.6)
 
 GEM
