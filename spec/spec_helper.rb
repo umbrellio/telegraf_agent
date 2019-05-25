@@ -8,7 +8,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   Coveralls::SimpleCov::Formatter,
 ])
 
-SimpleCov.start { add_filter 'spec' }
+SimpleCov.start { add_filter "spec" }
 
 require "bundler/setup"
 require "telegraf_agent"

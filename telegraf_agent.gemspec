@@ -19,10 +19,11 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "influxdb", "~> 0.6"
 
+  spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "coveralls", "~> 0.8"
+  spec.add_development_dependency "pry"
   spec.add_development_dependency "rake", "~> 11.2"
   spec.add_development_dependency "rspec", "~> 3.8"
+  spec.add_development_dependency "rubocop-config-umbrellio"
   spec.add_development_dependency "simplecov", "~> 0.16"
-  spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "pry"
 end
