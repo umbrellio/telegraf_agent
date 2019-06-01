@@ -4,6 +4,8 @@ require "socket"
 require "influxdb"
 
 class TelegrafAgent
+  require_relative "telegraf_agent/version"
+
   ConnectionError = Class.new(StandardError)
 
   attr_reader :uri, :logger
