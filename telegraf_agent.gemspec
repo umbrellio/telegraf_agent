@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors  = ["nulldef"]
   spec.email    = ["nulldefiner@gmail.com", "oss@umbrellio.biz"]
   spec.homepage = "https://github.com/umbrellio/telegraf_agent"
+  spec.license  = "MIT"
 
   spec.summary     = "Telegraf agent"
   spec.description = "Telegraf agent"
